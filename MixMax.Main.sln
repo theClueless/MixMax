@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixMax.Main", "MixMax.Main\MixMax.Main.csproj", "{BC3608A0-832C-496E-A854-981EB2850E27}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{EA556D6C-C145-4F07-8B6A-04D3D372C2E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNancy", "TestNancy\TestNancy.csproj", "{333CDA3A-B394-46ED-A947-B4F1CE4B247D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{BC3608A0-832C-496E-A854-981EB2850E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3608A0-832C-496E-A854-981EB2850E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3608A0-832C-496E-A854-981EB2850E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333CDA3A-B394-46ED-A947-B4F1CE4B247D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333CDA3A-B394-46ED-A947-B4F1CE4B247D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333CDA3A-B394-46ED-A947-B4F1CE4B247D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333CDA3A-B394-46ED-A947-B4F1CE4B247D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{333CDA3A-B394-46ED-A947-B4F1CE4B247D} = {EA556D6C-C145-4F07-8B6A-04D3D372C2E8}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,14 @@
+﻿body {
+    font-family: sans-serif
+}   
+header {
+    font-size: 26px
+    
+}
+
+footer {
+    border: solid 2px bisque;
+    border-radius: 2px;
+    padding: 4px;
+    background-color: lightgray
+}

@@ -16,8 +16,9 @@ namespace TestNancy
     {
         public TestModule()
         {
-            Get["/"] = p => View["Main.html"];
-            Get["/allFileView.html"] = p => View["allFileView.html"];
+            Get["/"] = p => View["content/Views/Main.html"];
+            Get["/Main.html"] = p => View["content/Views/Main.html"];
+            Get["/allFileView.html"] = p => View["content/Views/allFileView.html"];
             Get["/generatePlaylist"] = p =>
                 {
                     var playList = new PlayList { Name = "First", SongCount = 20 };

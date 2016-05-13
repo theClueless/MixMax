@@ -1,0 +1,7 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    }
+  }
+}

@@ -6,42 +6,35 @@ using System.Threading.Tasks;
 using MixMax.Main.Common;
 using System.IO;
 
-namespace MixMax.Main.Services.MP3TagReader
+namespace MixMax.Main.Services.MPThreeTagReader
 {
     public class MP3TagReader : IMP3TagReader
     {
-        public bool TryCreateTagFromFile(string filePath, out MP3Tag tag)
+        public MP3Tag TryCreateTagFromFile(string filePath)
         {
-            tag = null;
+            MP3Tag tag = null;
             try
             {
                 var ID3Tag = TagLib.File.Create(filePath);
                 if (ID3Tag is TagLib.Mpeg.AudioFile)
                 {
                     FillTagData(tag, ID3Tag);
-                    return true;
                 }                    
-                return false;
             }
-            catch 
+            catch
             {
-                return false;
             }
+            return tag;
         }
 
         private static void FillTagData(MP3Tag mpTag, TagLib.File ID3Tag)
         {
             if (ID3Tag.Tag != null)
             {
-                mpTag.Name = ID3Tag.Tag.Title ?? string.Empty;
-                mpTag.Album = ID3Tag.Tag.Album ?? string.Empty;
-                mpTag.Artist = ID3Tag.Tag.FirstPerformer ?? string.Empty;
+                mpTag.Name = ID3Tag.Tag.Title ?? null;
+                mpTag.Album = ID3Tag.Tag.Album ?? null;
+                mpTag.Artist = ID3Tag.Tag.FirstPerformer ?? null;
             }
         }
-    }
-
-    public class MockMp3Reader : IMP3TagReader
-    {
-
     }
 }

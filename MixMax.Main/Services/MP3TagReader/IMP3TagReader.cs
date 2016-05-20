@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MixMax.Main.Services.MP3TagReader
+namespace MixMax.Main.Services.MPThreeTagReader
 {
     public interface IMP3TagReader
     {
-        bool TryCreateTagFromFile(string filePath, out MP3Tag tag);
+        MP3Tag TryCreateTagFromFile(string filePath);
     }
 }

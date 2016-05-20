@@ -19,6 +19,6 @@ namespace MixMax.Main.Common
         public DateTime AddedOn { get; set; }
         public bool WasEverInAPlaylist { get; set; }
         public string FilePath { get; set; }
-        public MP3Tag Tag { get; set; }
+        public MediaTag Tag { get; set; }
     }
 }

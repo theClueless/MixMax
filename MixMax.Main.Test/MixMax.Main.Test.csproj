@@ -74,6 +74,7 @@
     <Compile Include="Services\DataProvider\JsonDataProviderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\MP3TagReader\MP3TagReaderTest.cs" />
+    <Compile Include="Services\TrackListSynchronizer\TrackListSynchronizer_StandardScenario_SynsSuccessfuly.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MixMax.Main\MixMax.Main.csproj">

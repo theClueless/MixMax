@@ -64,8 +64,8 @@
     <Compile Include="Services\DataProvider\JsonDataProvider.cs" />
     <Compile Include="Services\MP3TagReader\IMP3TagReader.cs" />
     <Compile Include="Services\MP3TagReader\MP3TagReader.cs" />
-    <Compile Include="Services\TrackListUpdater\ITrackListUpdater.cs" />
-    <Compile Include="Services\TrackListUpdater\TrackListUpdater.cs" />
+    <Compile Include="Services\TrackListSynchronizer\ITrackListSynchronizer.cs" />
+    <Compile Include="Services\TrackListSynchronizer\TrackListSynchronizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

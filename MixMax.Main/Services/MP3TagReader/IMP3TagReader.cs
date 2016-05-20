@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MixMax.Main.Services.MPThreeTagReader
 {
-    public interface IMP3TagReader
+    public interface IMediaTagReader
     {
-        MP3Tag TryCreateTagFromFile(string filePath);
+        MediaTag TryCreateTagFromFile(string filePath);
     }
 }

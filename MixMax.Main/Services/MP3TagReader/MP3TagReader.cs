@@ -8,26 +8,27 @@ using System.IO;
 
 namespace MixMax.Main.Services.MPThreeTagReader
 {
-    public class MP3TagReader : IMP3TagReader
+    public class MediaTagReader : IMediaTagReader
     {
-        public MP3Tag TryCreateTagFromFile(string filePath)
+        public MediaTag TryCreateTagFromFile(string filePath)
         {
-            MP3Tag tag = null;
+            MediaTag tag = null;
             try
             {
                 var ID3Tag = TagLib.File.Create(filePath);
                 if (ID3Tag is TagLib.Mpeg.AudioFile)
                 {
+                    tag = new MediaTag();
                     FillTagData(tag, ID3Tag);
                 }                    
             }
-            catch
+            catch(Exception e)
             {
-            }
+            }            
             return tag;
         }
 
-        private static void FillTagData(MP3Tag mpTag, TagLib.File ID3Tag)
+        private static void FillTagData(MediaTag mpTag, TagLib.File ID3Tag)
         {
             if (ID3Tag.Tag != null)
             {

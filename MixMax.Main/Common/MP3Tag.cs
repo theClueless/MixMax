@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MixMax.Main.Common
 {
-    public class MP3Tag
+    public class MediaTag
     {
         public string Artist { get; set; }
         public string Album { get; set; }

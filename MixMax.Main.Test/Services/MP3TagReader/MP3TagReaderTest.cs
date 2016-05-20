@@ -18,7 +18,7 @@ namespace MixMax.Main.Test.Services.MP3TagReader
             // Arrange
             var ID3Tag = TagLib.File.Create(@"C:\Users\Moshe\Downloads\Toxicity\01 - Prison Song - Copy.mp3");
 
-            var mp3TagReader = new MixMax.Main.Services.MPThreeTagReader.MP3TagReader();
+            var mp3TagReader = new MixMax.Main.Services.MPThreeTagReader.MediaTagReader();
             var track = mp3TagReader.TryCreateTagFromFile(@"C:\Users\Moshe\Downloads\Toxicity\01 - Prison Song - Copy.mp3");
 
             // Act

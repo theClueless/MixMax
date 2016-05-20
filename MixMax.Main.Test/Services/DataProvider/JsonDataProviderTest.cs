@@ -87,7 +87,7 @@ namespace MixMax.Main.Test.Services.DataProvider
                     TotalCount = 5,
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
-                    Tag = new MP3Tag { Name = "aa", Album = "a", Artist = "the a's" },
+                    Tag = new MediaTag { Name = "aa", Album = "a", Artist = "the a's" },
                 },
                 new Track
                 {
@@ -99,7 +99,7 @@ namespace MixMax.Main.Test.Services.DataProvider
                     TotalCount = 5,
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
-                    Tag = new MP3Tag { Name = "a", Album = "a", Artist = "the a's" },
+                    Tag = new MediaTag { Name = "a", Album = "a", Artist = "the a's" },
                 },
                 new Track
                 {
@@ -111,7 +111,7 @@ namespace MixMax.Main.Test.Services.DataProvider
                     TotalCount = 5,
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
-                    Tag = new MP3Tag { Name = "aaa", Album = "a", Artist = "the a's" },
+                    Tag = new MediaTag { Name = "aaa", Album = "a", Artist = "the a's" },
                 },
             };
 

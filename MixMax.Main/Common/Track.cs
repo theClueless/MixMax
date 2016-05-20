@@ -11,10 +11,7 @@ namespace MixMax.Main.Common
         public int Id { get; set; }
         public int LastUpdateCount { get; set; }
         public int ThreeMonthCount { get; set; }
-        public int TotalCount { get; set; }
-        public string Artist { get; set; }
-        public string Album { get; set; }
-        public string Name { get; set; }
+        public int TotalCount { get; set; }        
         public bool DoesLike { get; set; }
         public DateTime AddedOn { get; set; }
         public bool WasEverInAPlaylist { get; set; }

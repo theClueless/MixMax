@@ -11,45 +11,59 @@ namespace MixMax.Main.Services.TrackListSynchronizer
 {
     public class TrackListSynchronizer : ITrackListSynchronizer
     {
-        private int _maxIdCoutner;
+        private IMediaTagReader _mediaTagReader;
 
-        public Dictionary<int,Track> SyncTrackList(string rootFolder, Dictionary<int, Track> tracks)
+        public TrackListSynchronizer(IMediaTagReader mediaTagReader)
         {
-            Dictionary<string, Track> syncedTrackList = ConvertDictFromIdToFilePathAndSetMaxCounter(tracks);           
-            if (Directory.Exists(rootFolder))
+            _mediaTagReader = mediaTagReader;
+        }
+
+        public Dictionary<string, Track> SyncTrackList(IEnumerable<string> rootFolders, Dictionary<string, Track> tracks)
+        {
+            var allFiles = GetAllFiles(rootFolders);
+            tracks = SyncTrackList(allFiles, tracks);
+            return tracks;
+        }
+
+        private string[] GetAllFiles(IEnumerable<string> rootFolders)
+        {
+            IEnumerable<string> folderFiles = new List<string>();
+            foreach (var folder in rootFolders)
             {
-                IMediaTagReader mp3TagReader = new MediaTagReader();
-                var folderFiles = Directory.GetFiles(rootFolder, "*", SearchOption.AllDirectories);
-                MediaTag tag;
-                foreach (var file in folderFiles)
+                if (Directory.Exists(folder))
                 {
-                    tag = mp3TagReader.TryCreateTagFromFile(file);
-                    if (tag != null)
+                    folderFiles = folderFiles.Concat(Directory.GetFiles(folder, "*", SearchOption.AllDirectories));
+                }
+            }
+            return folderFiles.ToArray();
+        }
+
+        private Dictionary<string, Track> SyncTrackList(string[] folderFiles, Dictionary<string, Track> tracks)
+        {
+            MediaTag tag;
+            foreach (var file in folderFiles)
+            {
+                tag = _mediaTagReader.TryCreateTagFromFile(file);
+                if (tag != null)
+                {
+                    if (tracks.ContainsKey(file))
                     {
-                        if (syncedTrackList.ContainsKey(file))
-                        {
-                            syncedTrackList[file].Tag = tag;
-                        }
-                        else
-                        {
-                            Track track = CreateNewTrack(tag, file);
-                            syncedTrackList.Add(track.FilePath, track);
-                        }
+                        tracks[file].Tag = tag;
                     }
-                    else if (Directory.Exists(file))
+                    else
                     {
-                        SyncTrackList(file, tracks);
+                        Track track = CreateNewTrack(tag, file);
+                        tracks.Add(track.FilePath, track);
                     }
                 }
             }
-            return ConvertDictKeyFromPathToId(syncedTrackList);
+            return tracks;
         }
 
         private Track CreateNewTrack(MediaTag tag, string file)
         {
             return new Track
             {
-                Id = _maxIdCoutner++,
                 AddedOn = DateTime.Today,
                 FilePath = file,
                 Tag = tag,
@@ -59,30 +73,6 @@ namespace MixMax.Main.Services.TrackListSynchronizer
                 LastUpdateCount = 0,
                 DoesLike = null,
             };
-        }
-
-        private Dictionary<string, Track> ConvertDictFromIdToFilePathAndSetMaxCounter(Dictionary<int, Track> tracks)
-        {
-            int maxCounterId = 0;
-            Dictionary<string, Track> res = new Dictionary<string, Track>();
-            foreach (var track in tracks)
-            {
-                maxCounterId = track.Key > maxCounterId ? track.Key : maxCounterId;
-                res.Add(track.Value.FilePath, track.Value);
-            }
-            maxCounterId++;
-            _maxIdCoutner = maxCounterId;
-            return res;
-        }
-
-        private Dictionary<int, Track> ConvertDictKeyFromPathToId(Dictionary<string, Track> tracks)
-        {
-            Dictionary<int, Track> res = new Dictionary<int, Track>();
-            foreach (var track in tracks)
-            {
-                res.Add(track.Value.Id, track.Value);
-            }
-            return res;
         }
     }
 }

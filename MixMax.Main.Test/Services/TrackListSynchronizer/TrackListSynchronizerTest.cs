@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MixMax.Main.Services.TrackListSynchronizer;
+using MixMax.Main.Services.MPThreeTagReader;
 
 namespace MixMax.Main.Test.Services.TrackListSynchronizer
 {
@@ -16,10 +17,10 @@ namespace MixMax.Main.Test.Services.TrackListSynchronizer
         public void TrackListSynchronizer_StandardScenario_SynsSuccessfuly()
         {
             // Arrange
-            string rootFolder = @"C:\Users\Moshe\Music\mp3";
-            Dictionary<int, Track> originalDict = new Dictionary<int, Track>();
-            Dictionary<string, Track> resultDict = new Dictionary<string, Track>();
-            MixMax.Main.Services.TrackListSynchronizer.TrackListSynchronizer syncer = new Main.Services.TrackListSynchronizer.TrackListSynchronizer();
+            string[] rootFolder = new[] { @"C:\Users\Moshe\Music\mp3" };
+            Dictionary<string, Track> originalDict = new Dictionary<string, Track>();
+            MixMax.Main.Services.TrackListSynchronizer.TrackListSynchronizer syncer = 
+                new Main.Services.TrackListSynchronizer.TrackListSynchronizer(new MediaTagReader());
 
             // Act
             originalDict = syncer.SyncTrackList(rootFolder, originalDict);

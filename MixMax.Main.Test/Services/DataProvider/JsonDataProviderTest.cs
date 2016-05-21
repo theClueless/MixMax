@@ -81,7 +81,6 @@ namespace MixMax.Main.Test.Services.DataProvider
                 {
                     AddedOn = new DateTime(2016,1,1),
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,
@@ -93,7 +92,6 @@ namespace MixMax.Main.Test.Services.DataProvider
                 {
                     AddedOn = new DateTime(2016,1,1),
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,
@@ -105,7 +103,6 @@ namespace MixMax.Main.Test.Services.DataProvider
                 {
                     AddedOn = new DateTime(2016,1,1),
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,

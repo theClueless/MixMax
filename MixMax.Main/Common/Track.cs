@@ -8,7 +8,7 @@ namespace MixMax.Main.Common
 {
     public class Track
     {
-        public Guid MBid { get; set; }
+        public Guid? MBid { get; set; }
         /// <summary>
         /// we can use this field to find the number of plays the user had since the last sync (by subtracting this from TotalCount
         /// </summary>
@@ -20,5 +20,6 @@ namespace MixMax.Main.Common
         public bool WasEverInAPlaylist { get; set; }
         public string FilePath { get; set; }
         public MediaTag Tag { get; set; }
+        public bool MatchedOnLastFm { get; set; }
     }
 }

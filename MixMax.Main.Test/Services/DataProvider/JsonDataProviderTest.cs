@@ -80,44 +80,35 @@ namespace MixMax.Main.Test.Services.DataProvider
                 new Track
                 {
                     AddedOn = new DateTime(2016,1,1),
-                    Album = "a",
-                    Artist = "the a's",
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,
-                    Name = "aa",
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
+                    Tag = new MediaTag { Name = "aa", Album = "a", Artist = "the a's" },
                 },
                 new Track
                 {
                     AddedOn = new DateTime(2016,1,1),
-                    Album = "a",
-                    Artist = "the a's",
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,
-                    Name = "bb",
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
+                    Tag = new MediaTag { Name = "a", Album = "a", Artist = "the a's" },
                 },
                 new Track
                 {
                     AddedOn = new DateTime(2016,1,1),
-                    Album = "a",
-                    Artist = "the a's",
                     DoesLike = true,
-                    Id = 1,
                     LastUpdateCount = 5,
                     ThreeMonthCount = 3,
                     TotalCount = 5,
-                    Name = "cc",
                     WasEverInAPlaylist = false,
                     FilePath = @"C:\lolz",
+                    Tag = new MediaTag { Name = "aaa", Album = "a", Artist = "the a's" },
                 },
             };
 

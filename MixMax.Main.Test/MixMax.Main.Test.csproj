@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Services\DataProvider\JsonDataProviderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Last.fm\LastFmManagerTest.cs" />
     <Compile Include="Services\MP3TagReader\MP3TagReaderTest.cs" />
     <Compile Include="Services\TrackListSynchronizer\TrackListSynchronizerTest.cs" />
   </ItemGroup>

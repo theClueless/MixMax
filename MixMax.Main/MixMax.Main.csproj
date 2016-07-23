@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Common\DataRepository.cs" />
+    <Compile Include="Common\LastFmTrack.cs" />
     <Compile Include="Common\MixMaxException.cs" />
     <Compile Include="Common\MP3Tag.cs" />
     <Compile Include="Common\Package.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataProvider\IDataProvider.cs" />
     <Compile Include="Services\DataProvider\JsonDataProvider.cs" />
+    <Compile Include="Services\Last.fm\ILastFmManager.cs" />
+    <Compile Include="Services\Last.fm\LastFmManager.cs" />
     <Compile Include="Services\MP3TagReader\IMP3TagReader.cs" />
     <Compile Include="Services\MP3TagReader\MP3TagReader.cs" />
     <Compile Include="Services\TrackListSynchronizer\ITrackListSynchronizer.cs" />

@@ -18,6 +18,7 @@ namespace MixMax.Main.Services.TrackListSynchronizer
             _mediaTagReader = mediaTagReader;
         }
 
+        // key = file name
         public Dictionary<string, Track> SyncTrackList(IEnumerable<string> rootFolders, Dictionary<string, Track> tracks)
         {
             var allFiles = GetAllFiles(rootFolders);

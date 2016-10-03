@@ -10,5 +10,6 @@ namespace MixMax.Main.Common
     {
         public Package Package { get; set; }
         public List<Track> Tracks { get; set; }
+        public DateTime LastLastFMUpdateDate { get; set; }
     }
 }

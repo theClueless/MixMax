@@ -17,10 +17,12 @@ namespace MixMax.Main.Services.Last.fm
         void UpdateTrackDetails(Track track);
 
         /// <summary>
-        /// Tries to update track's plays properties
+        /// updates track's plays properties
         /// </summary>
         /// <param name="track"></param>
         /// <returns></returns>
-        void UpdateTrackPlays(Track track);
+        void UpdateTrackPlays(Dictionary<string, Track> repository, WeeklyCharRootObject weeklyChart);
+
+        void GetTrackChart(DateTime lastFMUpdateDate);
     }
 }

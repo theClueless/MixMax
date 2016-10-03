@@ -52,9 +52,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IMixMaxManager.cs" />
+    <Compile Include="MixMaxManager.cs" />
     <Compile Include="Common\DataRepository.cs" />
     <Compile Include="Common\LastFmTrack.cs" />
+    <Compile Include="Common\LastFmWeeklyChartResponse.cs" />
     <Compile Include="Common\MixMaxException.cs" />
     <Compile Include="Common\MP3Tag.cs" />
     <Compile Include="Common\Package.cs" />

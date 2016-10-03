@@ -25,12 +25,24 @@ namespace MixMax.Main.Test.Services.Last.fm
                 },
             };
             LastFmManager manager = new LastFmManager();
-            manager.UpdateTrackDetails(track);
 
             // Act
+            manager.UpdateTrackDetails(track);
 
             // Assert
-            Assert.IsFalse(true);
+            Assert.IsTrue(track.MBid != null && track.MBid == new Guid("32ca187e-ee25-4f18-b7d0-3b6713f24635"));
+        }
+
+        [TestMethod]
+        public void GetWeeklyChart_StandardScenario_GetSuccessfuly()
+        {
+            // Arrange
+            LastFmManager manager = new LastFmManager();
+            DateTime lastUpdate = DateTime.Now.AddDays(-6);
+
+            manager.GetTrackChart(lastUpdate);
+            // Act
+            // Assert
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixMax.Main", "MixMax.Main\MixMax.Main.csproj", "{BC3608A0-832C-496E-A854-981EB2850E27}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixMax.Main.Test", "MixMax.Main.Test\MixMax.Main.Test.csproj", "{DA140DE7-A95E-4248-8858-4184AB4CD39F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOwinForStaticServer", "TestOwinForStaticServer\TestOwinForStaticServer.csproj", "{CDB970D1-59B3-4A9B-BD5E-CE8938391DD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixMax.WindowsService", "MixMax.WindowsService\MixMax.WindowsService.csproj", "{3ED033B3-E7A9-4915-B84E-E846C0476616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{CDB970D1-59B3-4A9B-BD5E-CE8938391DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB970D1-59B3-4A9B-BD5E-CE8938391DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB970D1-59B3-4A9B-BD5E-CE8938391DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED033B3-E7A9-4915-B84E-E846C0476616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED033B3-E7A9-4915-B84E-E846C0476616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED033B3-E7A9-4915-B84E-E846C0476616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED033B3-E7A9-4915-B84E-E846C0476616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
